@@ -102,9 +102,11 @@ If two slaves controlled by different controller want to be showed on the same w
 New VitascopeController(params,element)
 There are three parameters:
 
-hover | if set to true, the element will be chosen if it is hovered. The default value is false.
-click | if set to true, the element will be chosen if it is clicked. The default value is true.
-autoSelect | if set to true, the first slave will be automatically selected, the default value is false.
+ Params | meaning 
+ --- | --- 
+| hover | if set to true, the element will be chosen if it is hovered. The default value is false. |
+| click | if set to true, the element will be chosen if it is clicked. The default value is true. |
+| autoSelect | if set to true, the first slave will be automatically selected, the default value is false.|if set to true, the first slave will be automatically selected, the default value is false.|
 
 ```html
 jQuery(function ($) {
@@ -113,7 +115,8 @@ jQuery(function ($) {
 ```
 
 * Functions:
-Class | function | description
+
+Class | function | description 
 ------|----------|------------
 VitascopeController | choose(idx) | choose the idxth item of this controller, the index begins from 0
 VitascopeController | cleanAll()  | remove the selected item of this controller
