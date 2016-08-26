@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/Vitascope-tabs.css" />
+    <link rel="stylesheet" type="text/css" href="custom.css" />
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="../js/Vitascope-tabs.js" ></script>
+</head>
+<body>
+    <div class="content" id="sample-1">
+        <div class="vita-slave" id="sample-1-slave">
+        <img class="vita-item" src="imgs/pikachu.png" />
+        <img class="vita-item" src="imgs/bulbasaur.png" />
+        <img class="vita-item" src="imgs/charmander.jpg" />
+        <img class="vita-item" src="imgs/squirtle.png" />
+        </div>
+        <div class="right">
+            <p>Pokemon: </p>
+            <ul class="vita-controller" vita-slaves="sample-1-slave" id="sample-1-controller">
+                <li class="vita-item">Pikachu</li>
+                <li class="vita-item">Bulbasaur</li>
+                <li class="vita-item">Charmander</li>
+                <li class="vita-item">Squirtle</li>
+            </ul>
+        </div>
+    </div>
+<script>
+    jQuery(function ($) {
+        var controller1= new VitascopeController({autoSelect:true},$("#sample-1-controller"));
+    });
+</script>
+    <div class="content" id="sample-2">
+        <div class="vita-slave" id="sample-2-slave">
+            <img class="vita-item" src="imgs/pikachu.png" />
+            <img class="vita-item" src="imgs/bulbasaur.png" />
+            <img class="vita-item" src="imgs/charmander.jpg" />
+            <img class="vita-item" src="imgs/squirtle.png" />
+        </div>
+        <div class="right">
+            <p>Pokemon: </p>
+            <ul class="vita-controller" vita-slaves="sample-2-slave" id="sample-2-controller">
+                <li class="vita-item">Pikachu</li>
+                <li class="vita-item">Bulbasaur</li>
+                <li class="vita-item">Charmander</li>
+                <li class="vita-item">Squirtle</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        jQuery(function ($) {
+            var controller2= new VitascopeController({autoSelect:true,hover:true},$("#sample-2-controller"));
+        });
+    </script>
+
+    <div class="content" id="sample-3">
+        <div class="vita-slave" id="sample-3-slave-1">
+            <img class="vita-item" src="imgs/pikachu.png" />
+            <img class="vita-item" src="imgs/bulbasaur.png" />
+            <img class="vita-item" src="imgs/charmander.jpg" />
+            <img class="vita-item" src="imgs/squirtle.png" />
+        </div>
+        <div class="right">
+            <p>Pokemon: </p>
+            <ul class="vita-controller" vita-slaves="sample-3-slave-1 sample-3-slave-2" id="sample-3-controller">
+                <li class="vita-item">Pikachu</li>
+                <li class="vita-item">Bulbasaur</li>
+                <li class="vita-item">Charmander</li>
+                <li class="vita-item">Squirtle</li>
+            </ul>
+            <p>Description: </p>
+            <div class="vita-slave" id="sample-3-slave-2">
+                <ul class="vita-item">
+                    <li class="pokemon-title">Pikachu</li>
+                    <li>Species: Mouse</li>
+                    <li>Type: Electric</li>
+                    <li>Abilities: Static</li>
+                    <li>Weakness: Ground</li>
+                </ul>
+                <ul class="vita-item">
+                    <li class="pokemon-title">Bulbasaur</li>
+                    <li>Species: Seed</li>
+                    <li>Type: Poison, Grass</li>
+                    <li>Abilities: Overgrow</li>
+                    <li>Weakness: Psychic, Flying, Ice, Fire</li>
+                </ul>
+                <ul class="vita-item">
+                    <li class="pokemon-title">Charmander</li>
+                    <li>Species: Lizard</li>
+                    <li>Type: Fire</li>
+                    <li>Abilities: Blaze</li>
+                    <li>Weakness: Ground, Rock, Water</li>
+                </ul>
+                <ul class="vita-item">
+                    <li class="pokemon-title">Squirtle</li>
+                    <li>Species: Tiny Turtle</li>
+                    <li>Type: Water</li>
+                    <li>Abilities: Torrent</li>
+                    <li>Weakness: Electric, Grass</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        jQuery(function ($) {
+            var controller3= new VitascopeController({autoSelect:true},$("#sample-3-controller"));
+        });
+    </script>
+
+    <div class="content" id="sample-4">
+
+        <div class="vita-group">
+        <div class="vita-slave" id="sample-4-slave-1" vita-group="pokemon-img">
+            <img class="vita-item" src="imgs/pikachu.png" />
+            <img class="vita-item" src="imgs/bulbasaur.png" />
+            <img class="vita-item" src="imgs/charmander.jpg" />
+            <img class="vita-item" src="imgs/squirtle.png" />
+        </div>
+            <div class="vita-slave" id="sample-4-slave-2-1" vita-group="pokemon-img">
+                <img class="vita-item" src="imgs/raichu.png" />
+            </div>
+            <div class="vita-slave" id="sample-4-slave-2-2" vita-group="pokemon-img">
+                <img class="vita-item" src="imgs/ivysaur.png" />
+                <img class="vita-item" src="imgs/Venusaur.png" />
+            </div>
+            <div class="vita-slave" id="sample-4-slave-2-3" vita-group="pokemon-img">
+                <img class="vita-item" src="imgs/Charmeleon.jpg" />
+                <img class="vita-item" src="imgs/Charizard.png" />
+            </div>
+        <div class="vita-slave" id="sample-4-slave-2-4" vita-group="pokemon-img">
+            <img class="vita-item" src="imgs/Wartortle.png" />
+            <img class="vita-item" src="imgs/Blastoise.png" />
+        </div>
+        </div>
+
+        <div class="right">
+            <p>Pokemon: </p>
+            <ul class="vita-controller" vita-slaves="sample-4-slave-1 sample-4-slave-3 sample-4-slave-4-1" id="sample-4-controller-1">
+                <li class="vita-item">Pikachu</li>
+                <li class="vita-item">Bulbasaur</li>
+                <li class="vita-item">Charmander</li>
+                <li class="vita-item">Squirtle</li>
+            </ul>
+            <p>Evolution: </p>
+            <ul class="vita-slave" id="sample-4-slave-3">
+                <li class="vita-item">
+                    <ul class="vita-controller" id="sample-4-controller-2-1" vita-slaves="sample-4-slave-2-1 sample-4-slave-4-2">
+                        <li class="vita-item">Raichu</li>
+                    </ul>
+                </li>
+                <li class="vita-item">
+                    <ul class="vita-controller" id="sample-4-controller-2-2" vita-slaves="sample-4-slave-2-2 sample-4-slave-4-3">
+                        <li class="vita-item">Ivysaur</li>
+                        <li class="vita-item">Venusaur</li>
+                    </ul>
+                </li>
+                <li class="vita-item">
+                    <ul class="vita-controller" id="sample-4-controller-2-3" vita-slaves="sample-4-slave-2-3 sample-4-slave-4-4">
+                        <li class="vita-item">Charmeleon</li>
+                        <li class="vita-item">Charizard</li>
+                    </ul>
+                </li>
+                <li class="vita-item">
+                    <ul class="vita-controller" id="sample-4-controller-2-4" vita-slaves="sample-4-slave-2-4 sample-4-slave-4-5">
+                        <li class="vita-item">Wartortle</li>
+                        <li class="vita-item">Blastoise</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Description: </p>
+            <div class="vita-group">
+            <div class="vita-slave" id="sample-4-slave-4-1" vita-group="pokemon-des">
+                <ul class="vita-item">
+                    <li class="pokemon-title">Pikachu</li>
+                    <li>Species: Mouse</li>
+                    <li>Type: Electric</li>
+                    <li>Abilities: Static</li>
+                    <li>Weakness: Ground</li>
+                </ul>
+                <ul class="vita-item">
+                    <li class="pokemon-title">Bulbasaur</li>
+                    <li>Species: Seed</li>
+                    <li>Type: Poison, Grass</li>
+                    <li>Abilities: Overgrow</li>
+                    <li>Weakness: Psychic, Flying, Ice, Fire</li>
+                </ul>
+                <ul class="vita-item">
+                    <li class="pokemon-title">Charmander</li>
+                    <li>Species: Lizard</li>
+                    <li>Type: Fire</li>
+                    <li>Abilities: Blaze</li>
+                    <li>Weakness: Ground, Rock, Water</li>
+                </ul>
+                <ul class="vita-item">
+                    <li class="pokemon-title">Squirtle</li>
+                    <li>Species: Tiny Turtle</li>
+                    <li>Type: Water</li>
+                    <li>Abilities: Torrent</li>
+                    <li>Weakness: Electric, Grass</li>
+                </ul>
+            </div>
+                <div class="vita-slave" id="sample-4-slave-4-2" vita-group="pokemon-des">
+                    <ul class="vita-item">
+                        <li class="pokemon-title">Raichu</li>
+                        <li>Species: Mouse</li>
+                        <li>Type: Electric</li>
+                        <li>Abilities: Static</li>
+                        <li>Weakness: Ground</li>
+                    </ul>
+                </div>
+                <div class="vita-slave" id="sample-4-slave-4-3" vita-group="pokemon-des">
+                    <ul class="vita-item">
+                        <li class="pokemon-title">Ivysaur</li>
+                        <li>Species: Seed</li>
+                        <li>Type: Poison, Grass</li>
+                        <li>Abilities: Overgrow</li>
+                        <li>Weakness: Psychic, Flying, Ice, Fire</li>
+                    </ul>
+                    <ul class="vita-item">
+                        <li class="pokemon-title">Venusaur</li>
+                        <li>Species: Seed</li>
+                        <li>Type: Poison, Grass</li>
+                        <li>Abilities: Overgrow</li>
+                        <li>Weakness: Psychic, Flying, Ice, Fire</li>
+                        <li>Height (ft): 6' 7"</li>
+                    </ul>
+                </div>
+                <div class="vita-slave" id="sample-4-slave-4-4" vita-group="pokemon-des">
+                    <ul class="vita-item">
+                        <li class="pokemon-title">Charmeleon</li>
+                        <li>Species: Flame</li>
+                        <li>Type: Fire</li>
+                        <li>Abilities: Blaze</li>
+                        <li>Weakness: Ground, Rock, Water</li>
+                    </ul>
+                    <ul class="vita-item">
+                        <li class="pokemon-title">Charizard</li>
+                        <li>Species: Lizard</li>
+                        <li>Type: Flying, Fire</li>
+                        <li>Abilities: Blaze</li>
+                        <li>Weakness: Ground, Rock, Water</li>
+                    </ul>
+                </div>
+                <div class="vita-slave" id="sample-4-slave-4-5" vita-group="pokemon-des">
+                    <ul class="vita-item">
+                        <li class="pokemon-title">Wartortle</li>
+                        <li>Species: Turtle</li>
+                        <li>Type: Water</li>
+                        <li>Abilities: Torrent</li>
+                        <li>Weakness: Electric, Grass</li>
+                    </ul>
+                    <ul class="vita-item">
+                        <li class="pokemon-title">Blastoise</li>
+                        <li>Species: Shellfish</li>
+                        <li>Type: Water</li>
+                        <li>Abilities: Torrent</li>
+                        <li>Weakness: Electric, Grass</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        jQuery(function ($) {
+            var controller4= new VitascopeController({autoSelect:true},$("#sample-4-controller-1"));
+            $("#sample-4-slave-3 .vita-controller").each(function (idx,element) {
+                new VitascopeController({autoSelect:false},element);
+            });
+            $("#sample-4-controller-1").on("show.VitascopeController",function (event) {
+                $("#sample-4-slave-3 .vita-controller .vita-item").removeClass("selected");
+            });
+        });
+    </script>
+
+    <div class="content" id="sample-5">
+        <div class="vita-slave" id="sample-5-slave-1">
+            <div class="vita-item"><img src="imgs/shoes-blue.png" /></div>
+            <div class="vita-item"><img src="imgs/shoes-red.png" /></div>
+            <div class="vita-item"><img src="imgs/shoes-yellow.png" /></div>
+        </div>
+
+        <div class="right">
+            <p>Color:</p>
+            <ul class="vita-controller color-controller" vita-slaves="sample-5-slave-1 sample-5-slave-3 sample-5-slave-5">
+                <li class="vita-item"><img src="imgs/color-blue.png" /></li>
+                <li class="vita-item"><img src="imgs/color-red.png" /> </li>
+                <li class="vita-item"><img src="imgs/color-yellow.png" /> </li>
+            </ul>
+            <p>Size:</p>
+            <div class="vita-slave" id="sample-5-slave-3" >
+                <ul class="vita-item vita-controller size-controller" vita-slaves="sample-5-slave-4-1">
+                    <li class="vita-item">S</li>
+                    <li class="vita-item">M</li>
+                    <li class="vita-item">L</li>
+                </ul>
+                <ul class="vita-item vita-controller size-controller" vita-slaves="sample-5-slave-4-2">
+                    <li class="vita-item">L</li>
+                    <li class="vita-item">XL</li>
+                </ul>
+                <ul class="vita-item vita-controller size-controller" vita-slaves="sample-5-slave-4-3">
+                    <li class="vita-item">M</li>
+                    <li class="vita-item">L</li>
+                </ul>
+            </div>
+            <p>Description: </p>
+            <div class="vita-slave" id="sample-5-slave-5">
+                <div class="vita-item vita-slave" id="sample-5-slave-4-1">
+                    <p class="vita-item">Size S, Color Blue</p>
+                    <p class="vita-item">Size M, Color Blue</p>
+                    <p class="vita-item">Size L, Color Blue</p>
+                </div>
+                <div class="vita-item vita-slave" id="sample-5-slave-4-2">
+                    <p class="vita-item">Size L, Color Red</p>
+                    <p class="vita-item">Size XL, Color Red</p>
+                </div>
+                <div class="vita-item vita-slave" id="sample-5-slave-4-3">
+                    <p class="vita-item">Size M, Color Yellow</p>
+                    <p class="vita-item">Size L, Color Yellow</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        jQuery(function ($) {
+            $('#sample-5 .vita-controller').each(function (idx,element) {
+                new VitascopeController({autoSelect:true},element);
+            });
+        });
+    </script>
+
+
+</body>
+</html>

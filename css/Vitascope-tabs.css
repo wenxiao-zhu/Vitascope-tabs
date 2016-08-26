@@ -1,0 +1,21 @@
+.vita-controller {
+  display: inline-block;
+  margin: 10px; }
+  .vita-controller > .vita-item {
+    padding: 2px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent; }
+    .vita-controller > .vita-item.selected {
+      border: 1px solid black; }
+
+.vita-slave {
+  display: inline-block; }
+  .vita-slave > .vita-item {
+    display: none; }
+    .vita-slave > .vita-item.selected {
+      display: inline-block;
+      vertical-align: middle; }
+
+.vita-group {
+  display: inline-block; }

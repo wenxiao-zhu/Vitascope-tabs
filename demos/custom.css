@@ -1,0 +1,45 @@
+#sample-5-slave-1 img {
+  width: 300px;
+  height: 300px; }
+
+.vita-controller img {
+  width: 40px;
+  height: 40px; }
+
+.size-controller li.vita-item {
+  width: 30px;
+  text-align: -webkit-center;
+  line-height: 30px;
+  margin: 5px; }
+
+.color-controller > .vita-item {
+  padding: 0;
+  height: 42px; }
+
+.content {
+  margin: 20px auto;
+  width: 70%; }
+  .content .right {
+    display: inline-block;
+    margin-left: 20px;
+    width: 50%; }
+
+#sample-1 img, #sample-2 img, #sample-3 img, #sample-4 img {
+  width: 250px;
+  height: 250px; }
+
+#sample-3 .vita-slave > .vita-item.selected, #sample-4 .vita-slave > .vita-item.selected, #sample-5 .vita-slave > .vita-item.selected {
+  vertical-align: text-bottom; }
+
+#sample-4-slave-3 .vita-controller {
+  padding-left: 0; }
+
+#sample-5-slave-3 .vita-controller {
+  padding-left: 40px; }
+
+.pokemon-title {
+  font-weight: bold; }
+
+ul.vita-item {
+  list-style: none;
+  padding-left: 0; }
